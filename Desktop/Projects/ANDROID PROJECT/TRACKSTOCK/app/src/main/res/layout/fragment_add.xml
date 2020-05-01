@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/add_toolbar"
+        android:background="@color/colorPrimary"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:id="@+id/action_cancel"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:onClick="cancelRegister"
+                android:clickable="true"
+                />
+
+
+            <TextView
+                android:id="@+id/action_title"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Item"
+                />
+
+            <TextView
+                android:onClick="registerItem"
+                android:clickable="true"
+                android:id="@+id/action_save"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="#424242"
+        >
+
+        <ImageView
+            android:id="@+id/register_item_image"
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="center"
+            android:onClick="uploadImage"
+            android:src="@drawable/logo"
+            />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/register_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Item Name"
+            android:inputType="text"
+            android:textColorHint="@color/colorGray"
+            android:textColor="#009688"
+            android:focusedByDefault="true"
+            android:layout_marginBottom="10dp"
+            />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/register_item_stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Current Stock"
+            android:inputType="number"
+            android:textColorHint="@color/colorGray"
+            android:textColor="#009688"
+            android:layout_marginBottom="10dp"
+            />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/register_item_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price"
+            android:inputType="number"
+            android:textColorHint="@color/colorGray"
+            android:textColor="#009688"
+            android:layout_marginBottom="10dp"
+            />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:onClick="registerItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_item_btn"
+            android:text="Register"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:background="#009688"
+            android:textColor="@android:color/white"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

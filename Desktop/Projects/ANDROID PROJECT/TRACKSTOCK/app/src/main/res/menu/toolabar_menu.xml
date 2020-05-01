@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView"
+        />
+
+    <item
+        android:id="@+id/action_view"
+        android:title="View"
+        app:showAsAction="never">
+
+        <menu>
+            <item
+                android:id="@+id/action_list_view"
+                android:title="List View"/>
+            <item
+                android:id="@+id/action_grid_view"
+                android:title="Grid View"/>
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/action_backup"
+        android:title="Backup"
+        app:showAsAction="never">
+
+        <menu>
+            <item
+                android:id="@+id/action_import"
+                android:title="Import from File"/>
+            <item
+                android:id="@+id/action_export"
+                android:title="Export to file"/>
+        </menu>
+
+    </item>
+
+</menu>
